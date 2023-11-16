@@ -15,10 +15,18 @@ class ListsController < ApplicationController
   end
 
   def show
-    @bookmarks = Bookmark.where(params[:id]== :list_id)
+    @bookmarks = Bookmark.where(list_id: @list.id)
+    @movies = find_movies(@bookmarks)
   end
 
   private
+  def find_movies(bookmarks)
+    movies = []
+    bookmarks.each do |bookmark|
+      movies.push(Movie.find(bookmark.movie_id))
+    end
+    return movies
+  end
 
   def list_params
     params.require(:list).permit(:name)
