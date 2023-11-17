@@ -78,3 +78,5 @@ gem 'open-uri'
 gem 'json'
 
 gem 'unsplash'
+
+gem 'cloudinary'
