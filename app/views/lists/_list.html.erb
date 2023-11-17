@@ -1,7 +1,7 @@
 <div class="card m-2 p-1">
-  <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag list.photo.key, height: 200, width: 300, crop: :fill %>
   <div class="d-flex justify-content-between p-3">
-    <h2><%= list.name %></h2>
+    <h4><%= list.name %></h4>
     <%= link_to "More info", list_path(list), class: "streched-link text-decoration-none"%>
   </div>
 </div>

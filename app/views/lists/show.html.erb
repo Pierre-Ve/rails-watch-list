@@ -1,8 +1,7 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
-<%= link_to "Ajouter un film",  new_list_bookmark_path(@list) %>
+<%= render "shared/title", title: "#{@list.name} movies" %>
+<%= link_to "Ajouter un film",  new_list_bookmark_path(@list), class:"text-decoration-none btn btn-primary p-2" %>
 <div class="d-flex justifiy-content-center flex-wrap">
     <% @movies.each do |movie|%>
-        <%= render movie %>    
+        <%= render movie %>
     <% end%>
 </div>

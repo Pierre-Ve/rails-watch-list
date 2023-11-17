@@ -1,6 +1,5 @@
-<h1>Lists#index</h1>
-<h2>My Lists</h2>
-<div class="d-flex">
+<%= render "shared/title", title: "My Lists" %>
+<div class="d-flex flex-wrap justify-content-center">
   <% @lists.each do |list| %>
     <%= render list %>
   <% end %>

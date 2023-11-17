@@ -2,7 +2,6 @@
 <p>Find me in app/views/bookmarks/new.html.erb</p>
 <%= simple_form_for @bookmark, url: list_bookmarks_path do |f| %>
   <%= f.association :movie, prompt: "Choose a Movie"%>
-  <%= f.association :list, prompt: "Choose a List" %>
   <%= f.input :comment %>
   <%= f.button :submit, class:"btn btn-primary" %>
 <% end %>
