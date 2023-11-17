@@ -1,5 +1,5 @@
 <div class="card m-2 p-1">
-  <%= image_tag 'https://source.unsplash.com/random/1280x720', alt: "img"  %>
+  <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
   <div class="d-flex justify-content-between p-3">
     <h2><%= list.name %></h2>
     <%= link_to "More info", list_path(list), class: "streched-link text-decoration-none"%>
